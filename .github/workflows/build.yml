@@ -1,0 +1,34 @@
+name: Build STL Files
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@v21
+
+      - name: Setup Nix cache
+        uses: DeterminateSystems/magic-nix-cache-action@v13
+
+      - name: flake check
+        run: nix flake check
+
+      - name: Build STL files
+        run: nix build .
+
+      - name: Upload STL artifacts
+        uses: actions/upload-artifact@v5
+        with:
+          name: flashbox-stl-files
+          path: result/*.stl
+          if-no-files-found: error
