@@ -2,9 +2,11 @@
 
 A rugged box that holds an [emisar d4k flashlight](https://intl-outdoor.com/emisar-d4k-1-21700-high-power-quad-edc-led-flashlight.html) and a spare 21700 battery.
 
-This is a remix of [Rugged Storage Box by @bulbasaur0 on printables.com](https://www.printables.com/model/637028-rugged-storage-box-parametric-and-customizable).
-
 Requires 6 M3x30 screws.
+
+Get the STL files by generating them yourself using OpenSCAD, downloading from [GitHub Releases](https://github.com/justbuchanan/d4k-rugged-box/releases), or on [Printables.com](https://www.printables.com/model/1492671-d4k-flashlight-rugged-box).
+
+This is a remix of [Rugged Storage Box by @bulbasaur0 on printables.com](https://www.printables.com/model/637028-rugged-storage-box-parametric-and-customizable).
 
 ![closed](./pics/closed.jpg)
 
