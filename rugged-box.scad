@@ -95,7 +95,9 @@ Latch_Width = 20; // [5:1:50]
 Latch_Screw_Separation = 15; // [5:1:40]
 
 // Width in millimeters subtracted from latches for fit
-Size_Tolerance = 0.20; // [0:0.01:1]
+// NOTE: I initially had this at 0.2, but found the fit kind of loose. I tested
+// with 0 and it's much better.
+Size_Tolerance = 0.0; // [0:0.01:1]
 
 module __end_customizer_options__() { }
 
