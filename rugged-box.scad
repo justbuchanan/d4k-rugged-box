@@ -78,6 +78,9 @@ Label_Text = "Label";
 // Approximate height of text for optional label in millimeters
 Label_Text_Size = 10; // [5:0.1:25]
 
+// Include flashlight graphic on the top piece
+Include_Graphic = true;
+
 /* [Advanced Size Adjustments] */
 // Base wall thickness in millimeters for most of the box
 Wall_Thickness = 3.0; // [0.4:0.1:10]
@@ -152,8 +155,10 @@ module flashlight_box(part="bottom") {
                     }
                 }
 
-                linear_extrude(0.6)
-                flashlight_graphic();
+                if (Include_Graphic) {
+                    linear_extrude(0.6)
+                    flashlight_graphic();
+                }
             }
         } else if (part == "latch") {
             rbox_latch();
